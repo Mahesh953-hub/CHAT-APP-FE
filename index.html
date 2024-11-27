@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Chat-Web-App</title>
-    
-    <!-- Correct link to the CSS file -->
+    <!-- Tailwind CSS integration -->
     <link rel="stylesheet" href="/src/index.css" />
-</head>
-<body>
-    <div id="root"></div>
+  </head>
+  <body class="loading">
+    <!-- Loading screen with a spinner -->
+    <div class="loading-screen">
+      <div class="loader"></div>
+    </div>
 
-    <!-- Use type="module" to load React code properly -->
+    <!-- Content area will be shown after page load -->
+    <div id="root" class="content"></div>
+
+    <!-- Main React app script -->
     <script type="module" src="/src/main.js"></script>
-</body>
+  </body>
 </html>
