@@ -18,59 +18,8 @@ body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
     to bottom,
-    rgb(var(--background-start-rgb)),
+    transparent,
     rgb(var(--background-end-rgb))
-  );
-  font-family: 'Arial', sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-  overflow: hidden;
-}
-
-/* Loading Spinner */
-.loader {
-  border: 8px solid #f3f3f3; /* Light gray */
-  border-top: 8px solid #3498db; /* Blue */
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  animation: spin 2s linear infinite;
-}
-
-/* Keyframes for the spinning animation */
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/* If content is still loading, show the spinner */
-.loading-screen {
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.8); /* Slight white overlay */
-}
-
-/* Button or content container when the page is loaded */
-.content {
-  display: none; /* Initially hidden, will show after loading */
-}
-
-/* When the page is fully loaded, remove loading screen */
-body.loaded .loading-screen {
-  display: none;
-}
-
-body.loaded .content {
-  display: block; /* Show the content when loading is complete */
+  )
+  rgb(var(--background-start-rgb));
 }
