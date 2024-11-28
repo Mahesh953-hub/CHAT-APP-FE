@@ -3,6 +3,7 @@ import { io, Socket } from 'socket.io-client';
 import { useMessages } from '../store/messageStore';
 import { SOCKET_URL } from '../utils/constants';
 import { Message } from '../types';
+import toast from 'react-hot-toast';
 
 let socket: Socket;
 
@@ -11,6 +12,14 @@ export const useWebSocket = () => {
 
   useEffect(() => {
     socket = io(SOCKET_URL);
+
+    socket.on('connect', () => {
+      toast.success('Connected to chat server');
+    });
+
+    socket.on('connect_error', () => {
+      toast.error('Failed to connect to chat server');
+    });
 
     socket.on('message', (message: Message) => {
       addMessage({
