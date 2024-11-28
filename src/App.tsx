@@ -1,9 +1,8 @@
-import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Chat } from './components/chat/Chat';
-import { Profile } from './components/profile/Profile';
-import { Header } from './components/layout/Header';
-import { useTheme } from './hooks/useTheme';
+import { Chat } from '@components/chat/Chat';
+import { Profile } from '@components/profile/Profile';
+import { Header } from '@components/layout/Header';
+import { useTheme } from '@hooks/useTheme';
 import { Toaster } from 'react-hot-toast';
 
 function App() {
